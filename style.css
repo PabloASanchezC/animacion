@@ -46,9 +46,35 @@ input:checked {
   z-index: 1;
   width: 80px;
   height: 450px;
-  background-color: #2ec5a4;
   bottom: 0;
   right: 60px;
+
+  animation-name: jump;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  25%{
+    bottom: -80px;
+  }
+  100%{
+    bottom: 0;
+  }
+}
+
+.layer-1 input[type=checkbox] {
+  appearance: none;
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+
 }
 
 .head {
@@ -86,6 +112,23 @@ input:checked {
   background-color: #262626;
   border-radius: 100%;
   top: 19px;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  0% {
+    height: 10px;
+  }
+  33% {
+    transform: translate(0px, 5px);
+    height: 2px;
+  }
+  66% {
+    transform: translate(0px, 0px);
+    height: 10px;
+  }
 }
 
 .ojoIzquierdo {
@@ -119,7 +162,6 @@ input:checked {
   z-index: 1;
   width: 80px;
   height: 450px;
-  background-color: #2ec5a4;
   bottom: 0;
   left: 60px;
 }
@@ -144,7 +186,6 @@ input:checked {
   z-index: 3;
   width: 80px;
   height: 350px;
-  background-color: #2ec5a4;
   bottom: 0;
   left: 30px;
 }
@@ -168,7 +209,6 @@ input:checked {
   z-index: 5;
   width: 80px;
   height: 250px;
-  background-color: #2ec5a4;
   bottom: 0;
   right: 30px;
 }
